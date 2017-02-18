@@ -11,6 +11,7 @@ redshift &
 # set to recent wallpaper
 #sh ~/.fehbg&
 feh --bg-scale ~/Downloads/Walls/Ascent\ \(Final\).png 
+xbindkeys
 exec i3 
 
 #sxhkd &
