@@ -22,9 +22,9 @@ font-1 = FontAwesome:size=12;-2
 font-2 = siji:pixelsize=12;0
 
 ;modules-left = bspwm xwindow
-modules-left = i3 xwindow
+modules-left = i3
 modules-center = 
-modules-right = battery volume mpd date powermenu
+modules-right = network battery volume mpd date powermenu
 
 ;tray-position = right
 ;tray-padding = 2
@@ -237,11 +237,11 @@ menu-0-0-padding = 3
 menu-0-1-padding = 3
 
 menu-1-0 = reboot?  
-menu-1-0-exec = sudo reboot
+menu-1-0-exec = reboot
 menu-1-0-padding = 3
 
 menu-2-0 = power off?  
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-0-padding = 3
 
 [module/mpd]
@@ -281,4 +281,23 @@ format-online =    <label-song>
 ; Default: %artist% - %title%
 label-song = %title%
 format-online-padding = 3
+
+
+[module/network]
+type = internal/network
+interface = wlp1s0
+; Seconds to sleep between updates
+interval = 5.0
+;ping_interval = 10
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %essid%
+label-disconnected =    not connected
+label-disconnected-foreground = #66
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
 
