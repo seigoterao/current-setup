@@ -13,11 +13,11 @@
 
 
 # Increase Brightness
-"xbacklight -inc 1"
+"xbacklight -inc 10"
    XF86MonBrightnessUp
 
 # Decrease Brightness
-"xbacklight -dec 1"
+"xbacklight -dec 10"
    XF86MonBrightnessDown
 
 
