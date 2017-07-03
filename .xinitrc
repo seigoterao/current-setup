@@ -1,0 +1,14 @@
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+
+# set dpi 
+xrandr --dpi 192
+
+# start up programs 
+# set up colorscheme based on wallpaper
+wal -i "$(<"${HOME}/.cache/wal/wal")"
+redshift &
+xbindkeys &
+sxhkd &
+exec bspwm 
+ 
